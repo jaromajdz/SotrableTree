@@ -1,0 +1,107 @@
+ul {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  list-style-type: none;
+
+}
+
+li {
+
+    border-left:  1px solid #000;
+    padding-left: 3px;
+    margin-left: 1em;
+    width: auto;
+}
+
+.lidiv, .lidiv1 {
+  padding-left: 1em;
+  position: relative;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+
+  }
+
+.lidiv{
+  margin-left: 26px;
+}
+
+.lidiv::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: -30px;
+  bottom: 50%;
+  width: 40px;
+  border: 1px solid #000;
+  border-top: 0 none transparent;
+  border-right: 0 none transparent;
+
+}
+
+.onOver {
+  color: red;
+  background-color: white;
+}
+
+.lidiv1::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: -4px;
+  bottom: 50%;
+  width: 8px;
+  border: 1px solid #000;
+  border-top: 0 none transparent;
+  border-right: 0 none transparent;
+}
+
+
+ul > li:last-child {
+  border-left: 1px solid transparent;
+}
+
+
+.choosediv {
+  height: 1.7em;
+  width: 25px;
+  background-color: grey;
+  margin-left: 15px;
+
+}
+
+.outsidechoose {
+  border: 1px dotted grey;
+  background-color:  lightgrey;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  align-content: flex-end;
+  padding: 0px 0px 0px 15px
+}
+
+.closeul {
+  animation: closeul 0.3s
+}
+
+.openul {
+  animation: openul 0.3s
+}
+
+@keyframes closeul {
+  0%{height: auto;
+     color: black;}
+  100%{height: 0;
+  color: white;
+  }
+}
+
+@keyframes openul {
+  0%{height: 0;
+  color: white;}
+  100%{height: auto;
+  color: black;
+  }
+}

@@ -1,0 +1,56 @@
+.DButton {
+  position: relative;
+  left: -10px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  }
+
+.DButton:active {
+  background-color: white;
+
+}
+
+.DButton:hover {
+  background-color: lightgrey;
+
+}
+
+
+.closea {
+  animation: close 0.3s;
+}
+
+.opena {
+  animation: opening 0.3s;
+}
+
+@keyframes close {
+
+	0% {
+		transform: rotate(0deg);
+		color: black;		}
+	100% {
+		transform: rotate(-180deg);
+		color: white;
+		}
+
+}
+
+@keyframes opening {
+
+	0% {
+		transform: rotate(0deg);
+		color: white;		}
+	100% {
+		transform: rotate(180deg);
+		color: black;
+		}
+
+}
